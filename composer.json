@@ -1,0 +1,22 @@
+{
+  "name": "mrgrain/chassis-installer",
+  "description": "Composer installer for Chassis skins.",
+  "type": "composer-installer",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Moritz Kornher",
+      "email": "mail@moritzkornher.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {"Chassis\\Installer\\": "src/"}
+  },
+  "extra": {
+    "class": "Chassis\\Installer\\Installer"
+  },
+  "require": {
+    "composer/installers": "^1.0"
+  }
+}
