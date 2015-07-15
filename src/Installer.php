@@ -15,7 +15,7 @@ class Installer extends InstallerPlugin
      *
      * @var array
      */
-    private $supportedTypes = array(
+    protected $supportedTypes = array(
         'chassis'       => 'Chassis\\Installer\\ChassisInstaller',
     );
 
