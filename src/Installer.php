@@ -38,6 +38,25 @@ class Installer extends InstallerPlugin
     }
 
     /**
+     * {@inheritDoc}
+     */
+    protected function findFrameworkType($type)
+    {
+        $frameworkType = false;
+
+        krsort($this->supportedTypes);
+
+        foreach ($this->supportedTypes as $key => $val) {
+            if ($key === substr($type, 0, strlen($key))) {
+                $frameworkType = substr($type, 0, strlen($key));
+                break;
+            }
+        }
+
+        return $frameworkType;
+    }
+
+    /**
      * {@inheritdoc}
      */
     protected function getLocationPattern($frameworkType)
